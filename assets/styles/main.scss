@@ -1,0 +1,379 @@
+@import "global";
+@import "fonts";
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  ul {
+    list-style: none;
+  }
+  font-family: "gsr";
+  h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  h2 {
+    font-weight: normal;
+  }
+  p {
+    color: $secondary-color;
+  }
+  span {
+    font-weight: bold;
+  }
+  .colored {
+    color: $btn-color;
+  }
+
+  nav {
+    > a {
+      margin-right: 20px;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        color: $btn-color;
+        transition: all 300ms ease-in-out;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 30rem) {
+
+    .app {
+        padding: 10px;
+    }
+
+  h1 {
+    
+    font-size: 2.0rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .header {
+    .logo {
+      img {
+        width: 7.4rem;
+      }
+    }
+    nav {
+      .hide {
+        display: none;
+      }
+      .cta-active{
+        padding: 8px;
+        font-size: small;
+      }
+    }
+  }
+  .hero {
+    padding: 30px;
+  }
+  .how-works {
+    &_description {
+      max-width: 21.8rem;
+
+      &-head {
+        &-number {
+          max-width: 30px;
+          max-height: 30px;
+        }
+      }
+      &-content {
+        max-width: 300px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.cta-active {
+  color: $third-color;
+  background-color: $btn-color;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 300ms ease-out;
+  &:hover {
+    background-color: $btn-hover;
+    color: white;
+    transition: all 300ms ease-in-out;
+  }
+  &__hero {
+    font-weight: bold;
+    font-size: 18px;
+    color: $third-color;
+    background-color: $btn-color;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background-color 300ms ease-out;
+    &:hover {
+      background-color: $btn-hover;
+      color: white;
+      transition: all 300ms ease-in-out;
+    }
+  }
+  &__hero2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px;
+    color: $third-color;
+    background-color: $btn-color;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 300ms ease-out;
+    &:hover {
+      background-color: $btn-hover;
+      color: white;
+      transition: all 300ms ease-in-out;
+    }
+  }
+}
+
+//Navbar
+
+.menu{
+    display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+}
+
+.header {
+  padding: .5rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 10px;
+  }
+  ul {
+    display: flex;
+    overflow: hidden;
+  background-color: #fff;
+  }
+  li {
+    a{
+        display:block;
+        padding: 10px 20px;
+    }
+  }
+}
+
+//hero
+.hero {
+  height: 600px;
+  width: auto;
+  background-image: linear-gradient(
+      rgba(0, 212, 255, 0.6),
+      rgba(91, 143, 153, 0.6)
+    ),
+    url("../images/hero-bg.jpg");
+  background-size: cover;
+  text-align: center;
+  color: white;
+  > h1 {
+    padding-top: 12.5rem;
+  }
+  > h2 {
+    margin-bottom: 80px;
+  }
+}
+
+//How works section
+.how-works {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  &_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0px;
+  }
+
+  &_image {
+    img {
+      object-fit: fill;
+      border-radius: 20px;
+      width: 15rem;
+      height: 33rem;
+    }
+  }
+
+  &_about {
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px;
+    gap: 3.1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &-wr {
+      padding: 35px 40px;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  &_description {
+    align-items: center;
+    justify-content: center;
+    width: 550px;
+    &-head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 45px;
+        width: 45px;
+        background-color: $btn-color;
+        color: $third-color;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      &-name {
+        max-width: 400px;
+      }
+    }
+    &-content {
+      width: 450px;
+      margin-top: 25px;
+    }
+  }
+}
+
+//agencies section
+.agencies {
+  background-color: $grey-bg;
+  text-align: center;
+  padding: 60px 0px;
+  > h1 {
+    padding-bottom: 30px;
+    > span {
+      color: $btn-color;
+    }
+  }
+  &_logos {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+  }
+}
+
+//download app section
+.app {
+  background-color: $third-color;
+  padding: 60px 20px;
+  &-content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  &-description {
+    text-align: center;
+    max-width: 650px;
+  }
+  &-links {
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+  }
+  &-platform {
+    text-align: start;
+  }
+}
+
+//footer section
+.footer {
+  color: $third-color;
+  background-color: $btn-color;
+
+  &-content {
+    padding: 40px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  &-contact,
+  &-assistance,
+  &-rs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    > li {
+      margin-bottom: 100px;
+    }
+  }
+  &-contact_rs {
+    > ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > li {
+        margin-right: 20px;
+      }
+    }
+  }
+  &-contact_list {
+    > ul {
+      > li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+//copyright section
+.copyright {
+  padding: 25px;
+  text-align: center;
+  > h4 {
+    font-weight: 200;
+    color: $secondary-color;
+  }
+}

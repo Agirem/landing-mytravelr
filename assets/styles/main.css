@@ -1,0 +1,338 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "gsr";
+  src: url("/assets/fonts/Google Sans Regular.ttf");
+}
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "gsr";
+}
+* a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+* ul {
+  list-style: none;
+}
+* h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+* h2 {
+  font-weight: normal;
+}
+* p {
+  color: #888888;
+}
+* span {
+  font-weight: bold;
+}
+* .colored {
+  color: #009EE2;
+}
+* nav > a {
+  margin-right: 20px;
+  transition: all 300ms ease-in-out;
+}
+* nav > a:hover {
+  color: #009EE2;
+  transition: all 300ms ease-in-out;
+}
+
+@media screen and (max-width: 30rem) {
+  .app {
+    padding: 10px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .header .logo img {
+    width: 7.4rem;
+  }
+  .header nav .hide {
+    display: none;
+  }
+  .header nav .cta-active {
+    padding: 8px;
+    font-size: small;
+  }
+  .hero {
+    padding: 30px;
+  }
+  .how-works_description {
+    max-width: 21.8rem;
+  }
+  .how-works_description-head-number {
+    max-width: 30px;
+    max-height: 30px;
+  }
+  .how-works_description-content {
+    max-width: 300px;
+    margin-top: 10px;
+  }
+}
+.cta-active {
+  color: #ffffff;
+  background-color: #009EE2;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 300ms ease-out;
+}
+.cta-active:hover {
+  background-color: #0381b8;
+  color: white;
+  transition: all 300ms ease-in-out;
+}
+.cta-active__hero {
+  font-weight: bold;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #009EE2;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background-color 300ms ease-out;
+}
+.cta-active__hero:hover {
+  background-color: #0381b8;
+  color: white;
+  transition: all 300ms ease-in-out;
+}
+.cta-active__hero2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #009EE2;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 300ms ease-out;
+}
+.cta-active__hero2:hover {
+  background-color: #0381b8;
+  color: white;
+  transition: all 300ms ease-in-out;
+}
+
+.menu {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+}
+
+.header {
+  padding: 0.5rem 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+}
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 10px;
+}
+.header ul {
+  display: flex;
+  overflow: hidden;
+  background-color: #fff;
+}
+.header li a {
+  display: block;
+  padding: 10px 20px;
+}
+
+.hero {
+  height: 600px;
+  width: auto;
+  background-image: linear-gradient(rgba(0, 212, 255, 0.6), rgba(91, 143, 153, 0.6)), url("../images/hero-bg.jpg");
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+.hero > h1 {
+  padding-top: 12.5rem;
+}
+.hero > h2 {
+  margin-bottom: 80px;
+}
+
+.how-works {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.how-works_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+}
+.how-works_image img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 20px;
+  width: 15rem;
+  height: 33rem;
+}
+.how-works_about {
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px;
+  gap: 3.1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.how-works_about-wr {
+  padding: 35px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+.how-works_description {
+  align-items: center;
+  justify-content: center;
+  width: 550px;
+}
+.how-works_description-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.how-works_description-head-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  background-color: #009EE2;
+  color: #ffffff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.how-works_description-head-name {
+  max-width: 400px;
+}
+.how-works_description-content {
+  width: 450px;
+  margin-top: 25px;
+}
+
+.agencies {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 60px 0px;
+}
+.agencies > h1 {
+  padding-bottom: 30px;
+}
+.agencies > h1 > span {
+  color: #009EE2;
+}
+.agencies_logos {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.app {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+.app-content {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.app-description {
+  text-align: center;
+  max-width: 650px;
+}
+.app-links {
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+}
+.app-platform {
+  text-align: start;
+}
+
+.footer {
+  color: #ffffff;
+  background-color: #009EE2;
+}
+.footer-content {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px;
+  justify-content: center;
+}
+.footer-contact, .footer-assistance, .footer-rs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.footer-contact > li, .footer-assistance > li, .footer-rs > li {
+  margin-bottom: 100px;
+}
+.footer-contact_rs > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-contact_rs > ul > li {
+  margin-right: 20px;
+}
+.footer-contact_list > ul > li {
+  margin-bottom: 10px;
+}
+
+.copyright {
+  padding: 25px;
+  text-align: center;
+}
+.copyright > h4 {
+  font-weight: 200;
+  color: #888888;
+}/*# sourceMappingURL=main.css.map */
