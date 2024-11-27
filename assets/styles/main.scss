@@ -149,15 +149,16 @@
 }
 
 .header {
-  padding: .5rem 1.8rem;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  padding: 0.5rem 1.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   background-color: #fff;
   box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: fixed;
-  width: 100%;
   .logo {
     display: block;
     float: left;
@@ -271,6 +272,16 @@
   }
 }
 
+.how-works_about {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 //agencies section
 .agencies {
   background-color: $grey-bg;
@@ -375,5 +386,40 @@
   > h4 {
     font-weight: 200;
     color: $secondary-color;
+  }
+}
+
+// Animation pour les sections
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  scroll-margin-top: 60px;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: none; // Caché par défaut
+  background-color: $btn-color;
+  color: $third-color;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%; // Rend le bouton circulaire
+  cursor: pointer;
+  z-index: 1001; // Assurez-vous qu'il est au-dessus des autres éléments
+  transition: opacity 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  &:hover {
+    background-color: $btn-hover;
   }
 }

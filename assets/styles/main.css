@@ -136,6 +136,9 @@
 }
 
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
   padding: 0.5rem 1.8rem;
   display: flex;
   justify-content: space-between;
@@ -143,8 +146,6 @@
   flex-wrap: wrap;
   background-color: #fff;
   box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
 }
 .header .logo {
   display: block;
@@ -245,6 +246,16 @@
   margin-top: 25px;
 }
 
+.how-works_about {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+.how-works_about.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .agencies {
   background-color: #f3f3f3;
   text-align: center;
@@ -335,4 +346,38 @@
 .copyright > h4 {
   font-weight: 200;
   color: #888888;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+  scroll-margin-top: 60px;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  display: none;
+  background-color: #009EE2;
+  color: #ffffff;
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1001;
+  transition: opacity 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+}
+.back-to-top:hover {
+  background-color: #0381b8;
 }/*# sourceMappingURL=main.css.map */
